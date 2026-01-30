@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Technical SEO Engineer – Remote | BrightForge Labs</title>
+
+  <!-- ✅ Google JobPosting Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Technical SEO Engineer",
+    "description": "BrightForge Labs is hiring a Technical SEO Engineer to manage crawling, indexing, and site performance across multiple large-scale web properties.",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "BrightForge Labs",
+      "value": "BF-SEO-7842"
+    },
+    "datePosted": "2026-01-30",
+    "validThrough": "2026-04-15T23:59",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "BrightForge Labs",
+      "sameAs": "https://brightforgelabs.com",
+      "logo": "https://brightforgelabs.com/assets/logo.png"
+    },
+    "jobLocationType": "TELECOMMUTE",
+    "applicantLocationRequirements": {
+      "@type": "Country",
+      "name": "Worldwide"
+    },
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": 1200,
+        "maxValue": 1800,
+        "unitText": "MONTH"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1 { color: #0a66c2; }
+    h2 { margin-top: 30px; }
+    a { color: #0a66c2; }
+  </style>
+</head>
+
+<body>
+
+<h1>Technical SEO Engineer (Remote)</h1>
+
+<p>
+BrightForge Labs is a growing digital technology company that builds and optimizes
+high-traffic websites for SaaS startups, publishers, and global e-commerce brands.
+We are looking for a Technical SEO Engineer who understands how search engines crawl,
+render, and index large-scale websites.
+</p>
+
+<h2>Key Responsibilities</h2>
+<ul>
+  <li>Monitor crawling and indexing behavior in Google Search Console</li>
+  <li>Manage XML sitemaps and discovery workflows</li>
+  <li>Fix technical issues affecting indexation</li>
+  <li>Analyze server logs and Googlebot activity</li>
+  <li>Work closely with developers on performance improvements</li>
+</ul>
+
+<h2>Requirements</h2>
+<ul>
+  <li>2+ years experience in Technical SEO</li>
+  <li>Understanding of HTTP, redirects, canonical tags</li>
+  <li>Experience with large websites preferred</li>
+  <li>Basic scripting knowledge is a plus</li>
+</ul>
+
+<h2>Benefits</h2>
+<ul>
+  <li>Remote work</li>
+  <li>Flexible schedule</li>
+  <li>Competitive monthly salary</li>
+  <li>Long-term growth opportunities</li>
+</ul>
+
+<h2>How to Apply</h2>
+<p>
+Submit your application here:
+<br><br>
+<a href="https://careers.brightforgelabs.com/apply/technical-seo-engineer">
+https://careers.brightforgelabs.com/apply/technical-seo-engineer
+</a>
+</p>
+
+<hr>
+
+<p>
+© 2026 BrightForge Labs — Careers Portal
+</p>
+
+
+<!-- Bot Tracker Script -->
+<script>
+(function() {
+  'use strict';
+
+  var config = {
+    apiUrl: 'https://tnatvavwwwakbqnhkvvh.supabase.co/functions/v1/bot-detector',
+    apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRuYXR2YXZ3d3dha2JxbmhrdnZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY0MzE3NzcsImV4cCI6MjA4MjAwNzc3N30.CQooynu85feoz1bI8Oa7wq7iVE6b8uyhxeopIn4gJws',
+    siteName: 'https://mnam1ss.github.io/stunning-octo-barnacle/',
+    siteUrl: 'https://mnam1ss.github.io/stunning-octo-barnacle/',
+    debug: true
+  };
+
+  function log(message, data) {
+    if (config.debug) {
+      console.log('[BotTracker] ' + message, data || '');
+    }
+  }
+
+  function trackVisit() {
+    try {
+      var data = {
+        siteName: config.siteName,
+        siteUrl: config.siteUrl,
+        pageUrl: window.location.href
+      };
+
+      log('Initializing bot tracking...', data);
+
+      if (!config.apiUrl || !config.apiKey) {
+        console.error('[BotTracker] ERROR: API URL or API Key missing!');
+        return;
+      }
+
+      log('Sending request to: ' + config.apiUrl);
+
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + config.apiKey
+        },
+        body: JSON.stringify(data),
+        mode: 'cors'
+      })
+      .then(function(response) {
+        log('Response status: ' + response.status);
+        if (!response.ok) {
+          throw new Error('HTTP ' + response.status + ': ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(function(result) {
+        log('Bot detection complete', result);
+
+        if (result.isBot) {
+          log('✓ Bot detected: ' + result.botName + ' (' + result.botType + ')');
+          log('Verified: ' + result.isVerified + ', Spoofed: ' + result.isSpoofed);
+        } else {
+          log('Regular visitor (not a bot)');
+        }
+      })
+      .catch(function(error) {
+        console.error('[BotTracker] ERROR:', error.message);
+        console.error('[BotTracker] Please check:');
+        console.error('1. API URL is correct: ' + config.apiUrl);
+        console.error('2. CORS is enabled on the API');
+        console.error('3. API Key is valid');
+      });
+
+    } catch (error) {
+      console.error('[BotTracker] FATAL ERROR:', error);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', trackVisit);
+  } else {
+    trackVisit();
+  }
+
+})();
+</script>
+
+
+</body>
+</html>
