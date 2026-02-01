@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Vacancy – Customer Support Executive</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+    .job-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #111827;
+    }
+    .company {
+      color: #374151;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .details {
+      background: #e5e7eb;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    .details p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    h2 {
+      margin-top: 25px;
+      color: #1f2937;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .apply {
+      margin-top: 30px;
+      background: #dbeafe;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+    }
+    .apply a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .apply a:hover {
+      background: #1e40af;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="job-container">
+    <h1>Customer Support Executive</h1>
+    <div class="company">XYZ Services Pvt Ltd</div>
+
+    <div class="details">
+      <p>📍 Location: Lahore</p>
+      <p>🕒 Job Type: Full-Time</p>
+      <p>💰 Salary: PKR 40,000 – 60,000</p>
+    </div>
+
+    <h2>Job Description</h2>
+    <p>
+      We are hiring a Customer Support Executive to handle customer queries,
+      provide timely support, and ensure customer satisfaction.
+    </p>
+
+    <h2>Responsibilities</h2>
+    <ul>
+      <li>Answer customer calls and messages</li>
+      <li>Resolve customer complaints professionally</li>
+      <li>Maintain customer records</li>
+      <li>Coordinate with internal teams</li>
+    </ul>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>Minimum Intermediate qualification</li>
+      <li>Good communication skills</li>
+      <li>Basic computer knowledge</li>
+      <li>Ability to work under pressure</li>
+    </ul>
+
+    <div class="apply">
+      <h2>Apply Now</h2>
+      <p>Email your CV at <strong>hr@xyzservices.com</strong></p>
+      <a href="mailto:hr@xyzservices.com">Send CV</a>
+    </div>
+
+    <footer>
+      © 2026 XYZ Services Pvt Ltd
+    </footer>
+  </div>
+
+
+  <!-- Bot Tracker Script -->
+<script>
+(function() {
+  'use strict';
+
+  var config = {
+    apiUrl: 'https://tnatvavwwwakbqnhkvvh.supabase.co/functions/v1/bot-detector',
+    apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRuYXR2YXZ3d3dha2JxbmhrdnZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY0MzE3NzcsImV4cCI6MjA4MjAwNzc3N30.CQooynu85feoz1bI8Oa7wq7iVE6b8uyhxeopIn4gJws',
+    siteName: 'https://mnam1ss.github.io/stunning-octo-barnacle/',
+    siteUrl: 'https://mnam1ss.github.io/stunning-octo-barnacle/',
+    debug: true
+  };
+
+  function log(message, data) {
+    if (config.debug) {
+      console.log('[BotTracker] ' + message, data || '');
+    }
+  }
+
+  function trackVisit() {
+    try {
+      var data = {
+        siteName: config.siteName,
+        siteUrl: config.siteUrl,
+        pageUrl: window.location.href
+      };
+
+      log('Initializing bot tracking...', data);
+
+      if (!config.apiUrl || !config.apiKey) {
+        console.error('[BotTracker] ERROR: API URL or API Key missing!');
+        return;
+      }
+
+      log('Sending request to: ' + config.apiUrl);
+
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + config.apiKey
+        },
+        body: JSON.stringify(data),
+        mode: 'cors'
+      })
+      .then(function(response) {
+        log('Response status: ' + response.status);
+        if (!response.ok) {
+          throw new Error('HTTP ' + response.status + ': ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(function(result) {
+        log('Bot detection complete', result);
+
+        if (result.isBot) {
+          log('✓ Bot detected: ' + result.botName + ' (' + result.botType + ')');
+          log('Verified: ' + result.isVerified + ', Spoofed: ' + result.isSpoofed);
+        } else {
+          log('Regular visitor (not a bot)');
+        }
+      })
+      .catch(function(error) {
+        console.error('[BotTracker] ERROR:', error.message);
+        console.error('[BotTracker] Please check:');
+        console.error('1. API URL is correct: ' + config.apiUrl);
+        console.error('2. CORS is enabled on the API');
+        console.error('3. API Key is valid');
+      });
+
+    } catch (error) {
+      console.error('[BotTracker] FATAL ERROR:', error);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', trackVisit);
+  } else {
+    trackVisit();
+  }
+
+})();
+</script>
+  
+</body>
+</html>
